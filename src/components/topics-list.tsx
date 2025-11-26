@@ -76,14 +76,10 @@ const TopicsList: VoidComponent = () => {
 			<ul class="space-y-1 h-48 overflow-y-auto">
 				<For each={topics()}>
 					{(topic, index) => (
-						<li class="flex items-center justify-between bg-white px-3 py-2 rounded text-sm">
+						<li class="flex items-center justify-between bg-gray-100 px-3 py-2 rounded text-sm">
 							<span class="font-mono">{topic}</span>
-							<button
-								type="button"
-								onClick={() => removeTopic(index())}
-								class="text-red-500 hover:text-red-700 text-xs"
-							>
-								✕
+							<button type="button" onClick={() => removeTopic(index())} class="">
+								&times;
 							</button>
 						</li>
 					)}

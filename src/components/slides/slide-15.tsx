@@ -28,7 +28,10 @@ const Slide: VoidComponent = () => (
 		<h2>7. Clone the Starter Repo</h2>
 
 		<p class="text-gray-600">Open ~/Developer in terminal:</p>
+
 		<CodeBlock code={code} lang="sh" />
+
+		<p>Remember to rename the repo and change directory to the new one.</p>
 
 		<TaskCheckbox taskNumber={7} />
 	</>

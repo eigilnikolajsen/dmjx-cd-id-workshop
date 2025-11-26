@@ -1,4 +1,4 @@
-import warp from "@/assets/images/warp.png";
+import warp from "@/assets/images/warp.webp";
 import { CodeBlock } from "@/components/code-block";
 import { TaskCheckbox } from "@/components/task-checkbox";
 import type { VoidComponent } from "solid-js";

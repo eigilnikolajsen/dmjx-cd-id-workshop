@@ -1,5 +1,5 @@
+import homebrew from "@/assets/images/homebrew.webp";
 import { CodeBlock } from "@/components/code-block";
-import { Placeholder } from "@/components/placeholder";
 import { TaskCheckbox } from "@/components/task-checkbox";
 import type { VoidComponent } from "solid-js";
 
@@ -12,7 +12,8 @@ const Slide: VoidComponent = () => (
 
 		<p class="text-gray-600">Find out how by yourself. Verify with:</p>
 		<CodeBlock code={code} lang="sh" />
-		<Placeholder type="interactive" suggestion="Link to brew.sh with installation command" />
+
+		<img src={homebrew} alt="Brew installation command" class="rounded-lg" />
 
 		<TaskCheckbox taskNumber={2} />
 	</>

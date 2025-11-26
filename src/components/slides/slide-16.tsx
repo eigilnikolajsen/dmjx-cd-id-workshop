@@ -1,4 +1,3 @@
-import { Placeholder } from "@/components/placeholder";
 import { TaskCheckbox } from "@/components/task-checkbox";
 import type { VoidComponent } from "solid-js";
 
@@ -18,7 +17,6 @@ const Slide: VoidComponent = () => (
 				<strong>Tailwind CSS IntelliSense</strong> — better Tailwind DX
 			</li>
 		</ul>
-		<Placeholder type="image" suggestion="Screenshot: VS Code / Cursor with extensions panel" />
 
 		<TaskCheckbox taskNumber={8} />
 	</>

@@ -1,6 +1,6 @@
-import { Placeholder } from "@/components/placeholder";
-import { TaskCheckbox } from "@/components/task-checkbox";
+import readme from "@/assets/images/readme.webp";
 import type { VoidComponent } from "solid-js";
+import { TaskCheckbox } from "../task-checkbox";
 
 const Slide: VoidComponent = () => (
 	<>
@@ -10,7 +10,8 @@ const Slide: VoidComponent = () => (
 			Open the project in your editor and follow the instructions in <code>README.md</code>
 		</p>
 		<p>Explore the structure and contents of the project.</p>
-		<Placeholder type="image" suggestion="Screenshot: Project file tree in editor sidebar" />
+
+		<img src={readme} alt="readme file in VS Code" class="rounded-lg" />
 
 		<TaskCheckbox taskNumber={9} />
 	</>

@@ -1,9 +1,10 @@
-import emptyFileTree from "@/assets/images/empty-file-tree.png";
+import emptyFileTree from "@/assets/images/empty-file-tree.webp";
 import type { VoidComponent } from "solid-js";
 
 const Slide: VoidComponent = () => (
 	<>
 		<h2>Introduction</h2>
+
 		<ul>
 			<li>Picking up new tools and experimenting</li>
 			<li>Code = most raw tool, most flexible medium</li>

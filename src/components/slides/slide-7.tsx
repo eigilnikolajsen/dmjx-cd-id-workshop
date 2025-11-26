@@ -3,6 +3,7 @@ import type { VoidComponent } from "solid-js";
 const Slide: VoidComponent = () => (
 	<>
 		<h2>Tips</h2>
+
 		<ul>
 			<li>
 				<kbd>⌥</kbd> + <kbd>←→</kbd> — Move word by word
