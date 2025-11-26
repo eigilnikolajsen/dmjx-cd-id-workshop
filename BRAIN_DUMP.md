@@ -29,13 +29,11 @@ I don't know coding terms in Danish, so I'll use the English ones.
 
 I've had to strike a balance between CD not being bored, but the learning curve not being too steep for ID
 
-The ones
-
 ## Rules
 
 - Please ask me and your classmates all the stupid questions.
 - If there's something you don't understand, have someone explain it, but insist on doing the thing yourself.
-- Name files in kebab case: name-of-file.pdf
+- Always put filenames in kebab case: name-of-file.pdf
 
 ## My hope for the workshop
 

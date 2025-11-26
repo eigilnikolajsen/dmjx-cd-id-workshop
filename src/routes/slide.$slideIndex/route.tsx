@@ -1,5 +1,6 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { SlideLayout } from "@/components/slide-layout";
 import { TOTAL_SLIDES } from "@/scripts/const";
 import { createFileRoute, Outlet, useNavigate } from "@tanstack/solid-router";
 import { onCleanup, onMount } from "solid-js";
@@ -51,8 +52,10 @@ const Route = createFileRoute("/slide/$slideIndex")({
 
 				<div class="fixed inset-0 flex items-center justify-center @container-[size]">
 					<main class="aspect-video max-w-[calc(100cqb*16/9)] w-full">
-						<article class="w-full h-full relative @container grid *:col-1 *:row-1 bg-white [view-transition-name:main-content]">
-							<Outlet />
+						<article class="w-full h-full relative @container bg-white [view-transition-name:main-content]">
+							<SlideLayout>
+								<Outlet />
+							</SlideLayout>
 						</article>
 					</main>
 				</div>
