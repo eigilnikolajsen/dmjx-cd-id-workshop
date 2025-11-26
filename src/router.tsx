@@ -9,6 +9,7 @@ const router = createTanStackRouter({
 	defaultPreloadStaleTime: 30 * 1000, // 30 seconds
 	defaultGcTime: 30 * 60 * 1000, // 30 minutes
 	defaultPendingComponent: PendingComponent,
+	defaultPreload: "render",
 });
 
 const getRouter = (): typeof router => router;

@@ -1,10 +1,10 @@
-import { Button } from "@/components/button";
-import { booleanAttribute, tabIndex } from "@/scripts/utils";
 import { useWindowSize } from "@solid-primitives/resize-observer";
 import { throttle } from "@tanstack/solid-pacer";
 import { animate } from "motion/mini";
 import type { JSX } from "solid-js";
 import { For, createEffect, createSignal, onCleanup } from "solid-js";
+import { booleanAttribute, tabIndex } from "../scripts/utils";
+import { Button } from "./button";
 
 interface Props<TItem> {
 	list: TItem[];

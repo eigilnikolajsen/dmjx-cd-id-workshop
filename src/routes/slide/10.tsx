@@ -1,13 +1,14 @@
-import homebrew from "@/assets/images/homebrew.webp";
-import { CodeBlock } from "@/components/code-block";
-import { SlideLayout } from "@/components/slide-layout";
-import { TaskCheckbox } from "@/components/task-checkbox";
 import { createFileRoute } from "@tanstack/solid-router";
+import homebrew from "../../assets/images/homebrew.webp";
+import { CodeBlock } from "../../components/code-block";
+import { SlideLayout } from "../../components/slide-layout";
+import { TaskCheckbox } from "../../components/task-checkbox";
 
 const code = `brew --version
 # > Homebrew 5.0.2`;
 
 const Route = createFileRoute("/slide/10")({
+	preload: true,
 	component: () => (
 		<SlideLayout index={10}>
 			<h2>2. Install Homebrew</h2>

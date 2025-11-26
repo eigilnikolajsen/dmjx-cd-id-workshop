@@ -41,8 +41,7 @@
 		"moduleResolution": "Bundler",
 		"forceConsistentCasingInFileNames": true,
 		"skipDefaultLibCheck": true,
-		"disableSourceOfProjectReferenceRedirect": true,
-		"paths": { "@/*": ["./src/*"] }
+		"disableSourceOfProjectReferenceRedirect": true
 	},
 	"include": [
 		"**/*.ts",

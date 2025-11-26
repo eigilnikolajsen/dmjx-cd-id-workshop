@@ -1,5 +1,5 @@
-import { isTaskCompleted, toggleTask } from "@/scripts/task-store";
 import type { VoidComponent } from "solid-js";
+import { isTaskCompleted, toggleTask } from "../scripts/task-store";
 
 interface Props {
 	taskNumber: number;

@@ -1,11 +1,12 @@
-import { CodeBlock } from "@/components/code-block";
-import { SlideLayout } from "@/components/slide-layout";
 import { createFileRoute } from "@tanstack/solid-router";
+import { CodeBlock } from "../../components/code-block";
+import { SlideLayout } from "../../components/slide-layout";
 
 const whoami = `whoami
 # > eini`;
 
 const Route = createFileRoute("/slide/1")({
+	preload: true,
 	component: () => (
 		<SlideLayout index={1}>
 			<h1 class="text-4xl font-bold mb-8">DMJX CD ID Workshop</h1>

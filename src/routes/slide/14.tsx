@@ -1,9 +1,10 @@
-import { CodeBlock } from "@/components/code-block";
-import { SlideLayout } from "@/components/slide-layout";
-import { TaskCheckbox } from "@/components/task-checkbox";
 import { createFileRoute } from "@tanstack/solid-router";
+import { CodeBlock } from "../../components/code-block";
+import { SlideLayout } from "../../components/slide-layout";
+import { TaskCheckbox } from "../../components/task-checkbox";
 
 const Route = createFileRoute("/slide/14")({
+	preload: true,
 	component: () => (
 		<SlideLayout index={14}>
 			<h2>6. Install GitHub CLI & Login</h2>

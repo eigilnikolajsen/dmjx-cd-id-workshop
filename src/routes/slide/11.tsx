@@ -1,13 +1,14 @@
-import git from "@/assets/images/git.webp";
-import { CodeBlock } from "@/components/code-block";
-import { SlideLayout } from "@/components/slide-layout";
-import { TaskCheckbox } from "@/components/task-checkbox";
 import { createFileRoute } from "@tanstack/solid-router";
+import git from "../../assets/images/git.webp";
+import { CodeBlock } from "../../components/code-block";
+import { SlideLayout } from "../../components/slide-layout";
+import { TaskCheckbox } from "../../components/task-checkbox";
 
 const code = `git --version
 # > git version 2.51.2`;
 
 const Route = createFileRoute("/slide/11")({
+	preload: true,
 	component: () => (
 		<SlideLayout index={11}>
 			<h2>3. Install Git</h2>

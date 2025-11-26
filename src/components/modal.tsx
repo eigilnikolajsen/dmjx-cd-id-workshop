@@ -1,7 +1,7 @@
-import { booleanAttribute } from "@/scripts/utils";
 import { animate } from "motion/mini";
 import type { Accessor, ParentComponent } from "solid-js";
 import { createEffect, createResource, createSignal, onCleanup, onMount, Show } from "solid-js";
+import { booleanAttribute } from "../scripts/utils";
 
 interface Props {
 	state: Accessor<"open" | "closed">;

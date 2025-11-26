@@ -1,7 +1,7 @@
-import { CodeBlock } from "@/components/code-block";
-import { SlideLayout } from "@/components/slide-layout";
-import { TaskCheckbox } from "@/components/task-checkbox";
 import { createFileRoute } from "@tanstack/solid-router";
+import { CodeBlock } from "../../components/code-block";
+import { SlideLayout } from "../../components/slide-layout";
+import { TaskCheckbox } from "../../components/task-checkbox";
 
 const code = `# clone the starter project
 gh repo clone eigilnikolajsen/canvas-starter
@@ -25,6 +25,7 @@ git add --all
 git commit -m "init"`;
 
 const Route = createFileRoute("/slide/15")({
+	preload: true,
 	component: () => (
 		<SlideLayout index={15}>
 			<h2>7. Clone the Starter Repo</h2>

@@ -1,6 +1,6 @@
-import { booleanAttribute } from "@/scripts/utils";
 import type { JSX, ParentComponent, ValidComponent } from "solid-js";
 import { Dynamic } from "solid-js/web";
+import { booleanAttribute } from "../scripts/utils";
 
 interface Props extends JSX.ButtonHTMLAttributes<HTMLButtonElement> {
 	selected?: boolean;

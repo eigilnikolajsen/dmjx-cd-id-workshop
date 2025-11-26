@@ -1,8 +1,8 @@
-import warp from "@/assets/images/warp.webp";
-import { CodeBlock } from "@/components/code-block";
-import { SlideLayout } from "@/components/slide-layout";
-import { TaskCheckbox } from "@/components/task-checkbox";
 import { createFileRoute } from "@tanstack/solid-router";
+import warp from "../../assets/images/warp.webp";
+import { CodeBlock } from "../../components/code-block";
+import { SlideLayout } from "../../components/slide-layout";
+import { TaskCheckbox } from "../../components/task-checkbox";
 
 const code = `# make a directory in root called Developer
 mkdir ~/Developer
@@ -11,6 +11,7 @@ mkdir ~/Developer
 cd ~/Developer`;
 
 const Route = createFileRoute("/slide/9")({
+	preload: true,
 	component: () => (
 		<SlideLayout index={9}>
 			<h2>1. Install a Terminal</h2>

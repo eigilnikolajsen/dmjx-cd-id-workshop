@@ -1,9 +1,9 @@
-import { TOTAL_SLIDES } from "@/scripts/const";
 import { createFileRoute, Outlet, useNavigate } from "@tanstack/solid-router";
 import { onCleanup, onMount } from "solid-js";
+import { TOTAL_SLIDES } from "../../scripts/const";
 
 const Route = createFileRoute("/slide")({
-	ssr: false,
+	preload: true,
 	component: () => {
 		const navigate = useNavigate();
 

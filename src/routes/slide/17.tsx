@@ -1,9 +1,10 @@
-import readme from "@/assets/images/readme.webp";
-import { SlideLayout } from "@/components/slide-layout";
 import { createFileRoute } from "@tanstack/solid-router";
+import readme from "../../assets/images/readme.webp";
+import { SlideLayout } from "../../components/slide-layout";
 import { TaskCheckbox } from "../../components/task-checkbox";
 
 const Route = createFileRoute("/slide/17")({
+	preload: true,
 	component: () => (
 		<SlideLayout index={17}>
 			<h2>9. Follow the README</h2>

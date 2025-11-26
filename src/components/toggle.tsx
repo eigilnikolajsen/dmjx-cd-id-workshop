@@ -1,5 +1,5 @@
-import { booleanAttribute } from "@/scripts/utils";
 import type { Accessor, Setter, VoidComponent } from "solid-js";
+import { booleanAttribute } from "../scripts/utils";
 
 interface Props {
 	checked: Accessor<boolean>;

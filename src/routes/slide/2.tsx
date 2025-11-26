@@ -1,8 +1,9 @@
-import emptyFileTree from "@/assets/images/empty-file-tree.webp";
-import { SlideLayout } from "@/components/slide-layout";
 import { createFileRoute } from "@tanstack/solid-router";
+import emptyFileTree from "../../assets/images/empty-file-tree.webp";
+import { SlideLayout } from "../../components/slide-layout";
 
 const Route = createFileRoute("/slide/2")({
+	preload: true,
 	component: () => (
 		<SlideLayout index={2}>
 			<h2>Introduction</h2>

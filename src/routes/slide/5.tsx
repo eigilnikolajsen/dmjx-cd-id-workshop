@@ -1,7 +1,8 @@
-import { SlideLayout } from "@/components/slide-layout";
 import { createFileRoute } from "@tanstack/solid-router";
+import { SlideLayout } from "../../components/slide-layout";
 
 const Route = createFileRoute("/slide/5")({
+	preload: true,
 	component: () => (
 		<SlideLayout index={5}>
 			<h2>My Hope</h2>

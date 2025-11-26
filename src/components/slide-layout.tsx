@@ -1,9 +1,33 @@
-import { TOTAL_SLIDES } from "@/scripts/const";
+import { Link } from "@tanstack/solid-router";
 import type { ParentComponent } from "solid-js";
+import { For } from "solid-js";
+import { TOTAL_SLIDES } from "../scripts/const";
 
 interface Props {
 	index: number;
 }
+
+const SLIDE_PATHS = [
+	"/slide/1",
+	"/slide/2",
+	"/slide/3",
+	"/slide/4",
+	"/slide/5",
+	"/slide/6",
+	"/slide/7",
+	"/slide/8",
+	"/slide/9",
+	"/slide/10",
+	"/slide/11",
+	"/slide/12",
+	"/slide/13",
+	"/slide/14",
+	"/slide/15",
+	"/slide/16",
+	"/slide/17",
+	"/slide/18",
+	"/slide/19",
+] as const;
 
 const SlideLayout: ParentComponent<Props> = (props) => (
 	<>
@@ -15,6 +39,10 @@ const SlideLayout: ParentComponent<Props> = (props) => (
 			<small>
 				Slide {props.index} of {TOTAL_SLIDES}
 			</small>
+
+			<nav class="opacity-0 absolute pointer-events-none">
+				<For each={SLIDE_PATHS}>{(path) => <Link to={path}>{path}</Link>}</For>
+			</nav>
 		</footer>
 	</>
 );

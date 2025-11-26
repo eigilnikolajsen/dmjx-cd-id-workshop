@@ -1,14 +1,14 @@
 /// <reference types="vite/client" />
 
-import appleTouchIcon from "@/assets/apple-touch-icon.png?no-inline";
-import faviconIco from "@/assets/favicon.ico?no-inline";
-import faviconSvg from "@/assets/svgs/favicon.svg?no-inline";
-import { Footer } from "@/components/footer";
-import { Header } from "@/components/header";
-import { PendingComponent } from "@/components/pending-component";
-import globalCss from "@/styles/global.css?url";
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/solid-router";
 import { HydrationScript } from "solid-js/web";
+import appleTouchIcon from "../assets/apple-touch-icon.png?no-inline";
+import faviconIco from "../assets/favicon.ico?no-inline";
+import faviconSvg from "../assets/svgs/favicon.svg?no-inline";
+import { Footer } from "../components/footer";
+import { Header } from "../components/header";
+import { PendingComponent } from "../components/pending-component";
+import globalCss from "../styles/global.css?url";
 
 // export const Route
 const Route = createRootRoute({
@@ -28,6 +28,7 @@ const Route = createRootRoute({
 			{ rel: "apple-touch-icon", href: appleTouchIcon },
 		],
 	}),
+	preload: true,
 	pendingComponent: () => <PendingComponent />,
 	pendingMs: 0,
 	pendingMinMs: 0,

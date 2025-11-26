@@ -1,8 +1,9 @@
-import { SlideLayout } from "@/components/slide-layout";
-import { TaskCheckbox } from "@/components/task-checkbox";
 import { createFileRoute } from "@tanstack/solid-router";
+import { SlideLayout } from "../../components/slide-layout";
+import { TaskCheckbox } from "../../components/task-checkbox";
 
 const Route = createFileRoute("/slide/16")({
+	preload: true,
 	component: () => (
 		<SlideLayout index={16}>
 			<h2>8. Install a Code Editor</h2>

@@ -1,7 +1,7 @@
-import { CodeBlock } from "@/components/code-block";
-import { SlideLayout } from "@/components/slide-layout";
-import { TaskCheckbox } from "@/components/task-checkbox";
 import { createFileRoute } from "@tanstack/solid-router";
+import { CodeBlock } from "../../components/code-block";
+import { SlideLayout } from "../../components/slide-layout";
+import { TaskCheckbox } from "../../components/task-checkbox";
 
 const code = `# pull remote changes (no-op if working alone)
 git pull
@@ -16,6 +16,7 @@ git commit -m "feat: new pattern"
 git push`;
 
 const Route = createFileRoute("/slide/18")({
+	preload: true,
 	component: () => (
 		<SlideLayout index={18}>
 			<h2>10. Write & Push Code</h2>
