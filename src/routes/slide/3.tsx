@@ -5,7 +5,7 @@ import { SlideLayout } from "../../components/slide-layout";
 const Route = createFileRoute("/slide/3")({
 	preload: true,
 	component: () => (
-		<SlideLayout index={2}>
+		<SlideLayout index={3}>
 			<h2>Thinking programmatically</h2>
 
 			<ul>
