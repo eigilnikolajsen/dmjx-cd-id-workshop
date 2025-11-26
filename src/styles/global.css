@@ -6,8 +6,19 @@
 	src: url("../assets/fonts/CommitMonoV143-VF.woff2") format("woff2");
 }
 
+@font-face {
+	font-family: "Duo Serif";
+	src: url("../assets/fonts/DuoSerif-Regular.woff2") format("woff2");
+}
+
+@font-face {
+	font-family: "Duo Sans";
+	src: url("../assets/fonts/KPDuoSans-Regular.woff2") format("woff2");
+}
+
 @theme {
-	--font-sans: "Commit-Mono", ui-sans-serif, system-ui, sans-serif;
+	--font-sans: "Duo Sans", ui-sans-serif, system-ui, sans-serif;
+	--font-serif: "Duo Serif", ui-serif, serif;
 	--font-mono: "Commit-Mono", ui-monospace, monospace;
 
 	--ease-in-sine: cubic-bezier(0.12, 0, 0.39, 0);
