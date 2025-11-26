@@ -1,14 +1,11 @@
-import { SlideLayout } from "@/components/slide-layout";
 import { TOTAL_SLIDES } from "@/scripts/const";
 import { createFileRoute, Outlet, useNavigate } from "@tanstack/solid-router";
 import { onCleanup, onMount } from "solid-js";
 
-const Route = createFileRoute("/slide/$slideIndex")({
+const Route = createFileRoute("/slide")({
 	ssr: false,
-	head: () => ({ meta: [{ title: "Home" }] }),
 	component: () => {
 		const navigate = useNavigate();
-		const params = Route.useParams();
 
 		onMount(() => {
 			addEventListener("keydown", handleKeyDown);
@@ -19,25 +16,22 @@ const Route = createFileRoute("/slide/$slideIndex")({
 		});
 
 		const handleKeyDown = (event: KeyboardEvent): void => {
+			const currentSlideIndex = globalThis.location.pathname.split("/").pop();
+			if (!currentSlideIndex) {
+				return;
+			}
+
 			if (event.key === "ArrowLeft" || event.key === "ArrowUp") {
-				const newSlideIndex = Number(params().slideIndex) - 1;
+				const newSlideIndex = Number(currentSlideIndex) - 1;
 				if (newSlideIndex > 0) {
-					navigate({
-						to: "/slide/$slideIndex",
-						params: { slideIndex: newSlideIndex.toString() },
-						viewTransition: { types: ["slide-down"] },
-					}).catch(console.error);
+					navigate({ to: `/slide/${newSlideIndex}`, viewTransition: { types: ["slide-down"] } });
 				}
 			}
 
 			if (event.key === "ArrowRight" || event.key === "ArrowDown") {
-				const newSlideIndex = Number(params().slideIndex) + 1;
+				const newSlideIndex = Number(currentSlideIndex) + 1;
 				if (newSlideIndex <= TOTAL_SLIDES) {
-					navigate({
-						to: "/slide/$slideIndex",
-						params: { slideIndex: newSlideIndex.toString() },
-						viewTransition: { types: ["slide-up"] },
-					}).catch(console.error);
+					navigate({ to: `/slide/${newSlideIndex}`, viewTransition: { types: ["slide-up"] } });
 				}
 			}
 		};
@@ -50,9 +44,7 @@ const Route = createFileRoute("/slide/$slideIndex")({
 				<div class="fixed inset-4 flex items-center justify-center @container-[size]">
 					<main class="aspect-square max-w-[calc(100cqb)] w-full group">
 						<article class="w-full h-full relative @container rounded-md overflow-hidden bg-white group-has-checked:bg-green-100 [view-transition-name:main-content]">
-							<SlideLayout>
-								<Outlet />
-							</SlideLayout>
+							<Outlet />
 						</article>
 					</main>
 				</div>

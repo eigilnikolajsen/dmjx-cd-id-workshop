@@ -6,9 +6,7 @@ import faviconSvg from "@/assets/svgs/favicon.svg?no-inline";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { PendingComponent } from "@/components/pending-component";
-import { queryClient } from "@/scripts/query";
 import globalCss from "@/styles/global.css?url";
-import { QueryClientProvider } from "@tanstack/solid-query";
 import { createRootRoute, HeadContent, Scripts } from "@tanstack/solid-router";
 import { HydrationScript } from "solid-js/web";
 
@@ -21,6 +19,7 @@ const Route = createRootRoute({
 			{ name: "description", content: "DMJX CD ID Workshop" },
 			{ name: "robots", content: "noindex, nofollow" },
 			{ name: "theme-color", content: "#000000" },
+			{ title: "DMJX CD ID Workshop" },
 		],
 		links: [
 			{ rel: "stylesheet", href: globalCss },
@@ -39,13 +38,14 @@ const Route = createRootRoute({
 			</head>
 			<body>
 				<HeadContent />
-				<QueryClientProvider client={queryClient}>
+
+				<div>
 					<Header />
 
 					{props.children}
 
 					<Footer />
-				</QueryClientProvider>
+				</div>
 				<Scripts />
 			</body>
 		</html>

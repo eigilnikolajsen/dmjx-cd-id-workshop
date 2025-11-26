@@ -9,56 +9,300 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SlideRouteRouteImport } from './routes/slide/route'
 import { Route as IndexRouteImport } from './routes/index'
-import { Route as SlideSlideIndexRouteRouteImport } from './routes/slide.$slideIndex/route'
-import { Route as SlideSlideIndexIndexRouteImport } from './routes/slide.$slideIndex/index'
+import { Route as SlideIndexRouteImport } from './routes/slide/index'
+import { Route as Slide9RouteImport } from './routes/slide/9'
+import { Route as Slide8RouteImport } from './routes/slide/8'
+import { Route as Slide7RouteImport } from './routes/slide/7'
+import { Route as Slide6RouteImport } from './routes/slide/6'
+import { Route as Slide5RouteImport } from './routes/slide/5'
+import { Route as Slide4RouteImport } from './routes/slide/4'
+import { Route as Slide3RouteImport } from './routes/slide/3'
+import { Route as Slide2RouteImport } from './routes/slide/2'
+import { Route as Slide19RouteImport } from './routes/slide/19'
+import { Route as Slide18RouteImport } from './routes/slide/18'
+import { Route as Slide17RouteImport } from './routes/slide/17'
+import { Route as Slide16RouteImport } from './routes/slide/16'
+import { Route as Slide15RouteImport } from './routes/slide/15'
+import { Route as Slide14RouteImport } from './routes/slide/14'
+import { Route as Slide13RouteImport } from './routes/slide/13'
+import { Route as Slide12RouteImport } from './routes/slide/12'
+import { Route as Slide11RouteImport } from './routes/slide/11'
+import { Route as Slide10RouteImport } from './routes/slide/10'
+import { Route as Slide1RouteImport } from './routes/slide/1'
 
+const SlideRouteRoute = SlideRouteRouteImport.update({
+  id: '/slide',
+  path: '/slide',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const SlideSlideIndexRouteRoute = SlideSlideIndexRouteRouteImport.update({
-  id: '/slide/$slideIndex',
-  path: '/slide/$slideIndex',
-  getParentRoute: () => rootRouteImport,
-} as any)
-const SlideSlideIndexIndexRoute = SlideSlideIndexIndexRouteImport.update({
+const SlideIndexRoute = SlideIndexRouteImport.update({
   id: '/',
   path: '/',
-  getParentRoute: () => SlideSlideIndexRouteRoute,
+  getParentRoute: () => SlideRouteRoute,
+} as any)
+const Slide9Route = Slide9RouteImport.update({
+  id: '/9',
+  path: '/9',
+  getParentRoute: () => SlideRouteRoute,
+} as any)
+const Slide8Route = Slide8RouteImport.update({
+  id: '/8',
+  path: '/8',
+  getParentRoute: () => SlideRouteRoute,
+} as any)
+const Slide7Route = Slide7RouteImport.update({
+  id: '/7',
+  path: '/7',
+  getParentRoute: () => SlideRouteRoute,
+} as any)
+const Slide6Route = Slide6RouteImport.update({
+  id: '/6',
+  path: '/6',
+  getParentRoute: () => SlideRouteRoute,
+} as any)
+const Slide5Route = Slide5RouteImport.update({
+  id: '/5',
+  path: '/5',
+  getParentRoute: () => SlideRouteRoute,
+} as any)
+const Slide4Route = Slide4RouteImport.update({
+  id: '/4',
+  path: '/4',
+  getParentRoute: () => SlideRouteRoute,
+} as any)
+const Slide3Route = Slide3RouteImport.update({
+  id: '/3',
+  path: '/3',
+  getParentRoute: () => SlideRouteRoute,
+} as any)
+const Slide2Route = Slide2RouteImport.update({
+  id: '/2',
+  path: '/2',
+  getParentRoute: () => SlideRouteRoute,
+} as any)
+const Slide19Route = Slide19RouteImport.update({
+  id: '/19',
+  path: '/19',
+  getParentRoute: () => SlideRouteRoute,
+} as any)
+const Slide18Route = Slide18RouteImport.update({
+  id: '/18',
+  path: '/18',
+  getParentRoute: () => SlideRouteRoute,
+} as any)
+const Slide17Route = Slide17RouteImport.update({
+  id: '/17',
+  path: '/17',
+  getParentRoute: () => SlideRouteRoute,
+} as any)
+const Slide16Route = Slide16RouteImport.update({
+  id: '/16',
+  path: '/16',
+  getParentRoute: () => SlideRouteRoute,
+} as any)
+const Slide15Route = Slide15RouteImport.update({
+  id: '/15',
+  path: '/15',
+  getParentRoute: () => SlideRouteRoute,
+} as any)
+const Slide14Route = Slide14RouteImport.update({
+  id: '/14',
+  path: '/14',
+  getParentRoute: () => SlideRouteRoute,
+} as any)
+const Slide13Route = Slide13RouteImport.update({
+  id: '/13',
+  path: '/13',
+  getParentRoute: () => SlideRouteRoute,
+} as any)
+const Slide12Route = Slide12RouteImport.update({
+  id: '/12',
+  path: '/12',
+  getParentRoute: () => SlideRouteRoute,
+} as any)
+const Slide11Route = Slide11RouteImport.update({
+  id: '/11',
+  path: '/11',
+  getParentRoute: () => SlideRouteRoute,
+} as any)
+const Slide10Route = Slide10RouteImport.update({
+  id: '/10',
+  path: '/10',
+  getParentRoute: () => SlideRouteRoute,
+} as any)
+const Slide1Route = Slide1RouteImport.update({
+  id: '/1',
+  path: '/1',
+  getParentRoute: () => SlideRouteRoute,
 } as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
-  '/slide/$slideIndex': typeof SlideSlideIndexRouteRouteWithChildren
-  '/slide/$slideIndex/': typeof SlideSlideIndexIndexRoute
+  '/slide': typeof SlideRouteRouteWithChildren
+  '/slide/1': typeof Slide1Route
+  '/slide/10': typeof Slide10Route
+  '/slide/11': typeof Slide11Route
+  '/slide/12': typeof Slide12Route
+  '/slide/13': typeof Slide13Route
+  '/slide/14': typeof Slide14Route
+  '/slide/15': typeof Slide15Route
+  '/slide/16': typeof Slide16Route
+  '/slide/17': typeof Slide17Route
+  '/slide/18': typeof Slide18Route
+  '/slide/19': typeof Slide19Route
+  '/slide/2': typeof Slide2Route
+  '/slide/3': typeof Slide3Route
+  '/slide/4': typeof Slide4Route
+  '/slide/5': typeof Slide5Route
+  '/slide/6': typeof Slide6Route
+  '/slide/7': typeof Slide7Route
+  '/slide/8': typeof Slide8Route
+  '/slide/9': typeof Slide9Route
+  '/slide/': typeof SlideIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
-  '/slide/$slideIndex': typeof SlideSlideIndexIndexRoute
+  '/slide/1': typeof Slide1Route
+  '/slide/10': typeof Slide10Route
+  '/slide/11': typeof Slide11Route
+  '/slide/12': typeof Slide12Route
+  '/slide/13': typeof Slide13Route
+  '/slide/14': typeof Slide14Route
+  '/slide/15': typeof Slide15Route
+  '/slide/16': typeof Slide16Route
+  '/slide/17': typeof Slide17Route
+  '/slide/18': typeof Slide18Route
+  '/slide/19': typeof Slide19Route
+  '/slide/2': typeof Slide2Route
+  '/slide/3': typeof Slide3Route
+  '/slide/4': typeof Slide4Route
+  '/slide/5': typeof Slide5Route
+  '/slide/6': typeof Slide6Route
+  '/slide/7': typeof Slide7Route
+  '/slide/8': typeof Slide8Route
+  '/slide/9': typeof Slide9Route
+  '/slide': typeof SlideIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
-  '/slide/$slideIndex': typeof SlideSlideIndexRouteRouteWithChildren
-  '/slide/$slideIndex/': typeof SlideSlideIndexIndexRoute
+  '/slide': typeof SlideRouteRouteWithChildren
+  '/slide/1': typeof Slide1Route
+  '/slide/10': typeof Slide10Route
+  '/slide/11': typeof Slide11Route
+  '/slide/12': typeof Slide12Route
+  '/slide/13': typeof Slide13Route
+  '/slide/14': typeof Slide14Route
+  '/slide/15': typeof Slide15Route
+  '/slide/16': typeof Slide16Route
+  '/slide/17': typeof Slide17Route
+  '/slide/18': typeof Slide18Route
+  '/slide/19': typeof Slide19Route
+  '/slide/2': typeof Slide2Route
+  '/slide/3': typeof Slide3Route
+  '/slide/4': typeof Slide4Route
+  '/slide/5': typeof Slide5Route
+  '/slide/6': typeof Slide6Route
+  '/slide/7': typeof Slide7Route
+  '/slide/8': typeof Slide8Route
+  '/slide/9': typeof Slide9Route
+  '/slide/': typeof SlideIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/slide/$slideIndex' | '/slide/$slideIndex/'
+  fullPaths:
+    | '/'
+    | '/slide'
+    | '/slide/1'
+    | '/slide/10'
+    | '/slide/11'
+    | '/slide/12'
+    | '/slide/13'
+    | '/slide/14'
+    | '/slide/15'
+    | '/slide/16'
+    | '/slide/17'
+    | '/slide/18'
+    | '/slide/19'
+    | '/slide/2'
+    | '/slide/3'
+    | '/slide/4'
+    | '/slide/5'
+    | '/slide/6'
+    | '/slide/7'
+    | '/slide/8'
+    | '/slide/9'
+    | '/slide/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/slide/$slideIndex'
-  id: '__root__' | '/' | '/slide/$slideIndex' | '/slide/$slideIndex/'
+  to:
+    | '/'
+    | '/slide/1'
+    | '/slide/10'
+    | '/slide/11'
+    | '/slide/12'
+    | '/slide/13'
+    | '/slide/14'
+    | '/slide/15'
+    | '/slide/16'
+    | '/slide/17'
+    | '/slide/18'
+    | '/slide/19'
+    | '/slide/2'
+    | '/slide/3'
+    | '/slide/4'
+    | '/slide/5'
+    | '/slide/6'
+    | '/slide/7'
+    | '/slide/8'
+    | '/slide/9'
+    | '/slide'
+  id:
+    | '__root__'
+    | '/'
+    | '/slide'
+    | '/slide/1'
+    | '/slide/10'
+    | '/slide/11'
+    | '/slide/12'
+    | '/slide/13'
+    | '/slide/14'
+    | '/slide/15'
+    | '/slide/16'
+    | '/slide/17'
+    | '/slide/18'
+    | '/slide/19'
+    | '/slide/2'
+    | '/slide/3'
+    | '/slide/4'
+    | '/slide/5'
+    | '/slide/6'
+    | '/slide/7'
+    | '/slide/8'
+    | '/slide/9'
+    | '/slide/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
-  SlideSlideIndexRouteRoute: typeof SlideSlideIndexRouteRouteWithChildren
+  SlideRouteRoute: typeof SlideRouteRouteWithChildren
 }
 
 declare module '@tanstack/solid-router' {
   interface FileRoutesByPath {
+    '/slide': {
+      id: '/slide'
+      path: '/slide'
+      fullPath: '/slide'
+      preLoaderRoute: typeof SlideRouteRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -66,37 +310,202 @@ declare module '@tanstack/solid-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/slide/$slideIndex': {
-      id: '/slide/$slideIndex'
-      path: '/slide/$slideIndex'
-      fullPath: '/slide/$slideIndex'
-      preLoaderRoute: typeof SlideSlideIndexRouteRouteImport
-      parentRoute: typeof rootRouteImport
-    }
-    '/slide/$slideIndex/': {
-      id: '/slide/$slideIndex/'
+    '/slide/': {
+      id: '/slide/'
       path: '/'
-      fullPath: '/slide/$slideIndex/'
-      preLoaderRoute: typeof SlideSlideIndexIndexRouteImport
-      parentRoute: typeof SlideSlideIndexRouteRoute
+      fullPath: '/slide/'
+      preLoaderRoute: typeof SlideIndexRouteImport
+      parentRoute: typeof SlideRouteRoute
+    }
+    '/slide/9': {
+      id: '/slide/9'
+      path: '/9'
+      fullPath: '/slide/9'
+      preLoaderRoute: typeof Slide9RouteImport
+      parentRoute: typeof SlideRouteRoute
+    }
+    '/slide/8': {
+      id: '/slide/8'
+      path: '/8'
+      fullPath: '/slide/8'
+      preLoaderRoute: typeof Slide8RouteImport
+      parentRoute: typeof SlideRouteRoute
+    }
+    '/slide/7': {
+      id: '/slide/7'
+      path: '/7'
+      fullPath: '/slide/7'
+      preLoaderRoute: typeof Slide7RouteImport
+      parentRoute: typeof SlideRouteRoute
+    }
+    '/slide/6': {
+      id: '/slide/6'
+      path: '/6'
+      fullPath: '/slide/6'
+      preLoaderRoute: typeof Slide6RouteImport
+      parentRoute: typeof SlideRouteRoute
+    }
+    '/slide/5': {
+      id: '/slide/5'
+      path: '/5'
+      fullPath: '/slide/5'
+      preLoaderRoute: typeof Slide5RouteImport
+      parentRoute: typeof SlideRouteRoute
+    }
+    '/slide/4': {
+      id: '/slide/4'
+      path: '/4'
+      fullPath: '/slide/4'
+      preLoaderRoute: typeof Slide4RouteImport
+      parentRoute: typeof SlideRouteRoute
+    }
+    '/slide/3': {
+      id: '/slide/3'
+      path: '/3'
+      fullPath: '/slide/3'
+      preLoaderRoute: typeof Slide3RouteImport
+      parentRoute: typeof SlideRouteRoute
+    }
+    '/slide/2': {
+      id: '/slide/2'
+      path: '/2'
+      fullPath: '/slide/2'
+      preLoaderRoute: typeof Slide2RouteImport
+      parentRoute: typeof SlideRouteRoute
+    }
+    '/slide/19': {
+      id: '/slide/19'
+      path: '/19'
+      fullPath: '/slide/19'
+      preLoaderRoute: typeof Slide19RouteImport
+      parentRoute: typeof SlideRouteRoute
+    }
+    '/slide/18': {
+      id: '/slide/18'
+      path: '/18'
+      fullPath: '/slide/18'
+      preLoaderRoute: typeof Slide18RouteImport
+      parentRoute: typeof SlideRouteRoute
+    }
+    '/slide/17': {
+      id: '/slide/17'
+      path: '/17'
+      fullPath: '/slide/17'
+      preLoaderRoute: typeof Slide17RouteImport
+      parentRoute: typeof SlideRouteRoute
+    }
+    '/slide/16': {
+      id: '/slide/16'
+      path: '/16'
+      fullPath: '/slide/16'
+      preLoaderRoute: typeof Slide16RouteImport
+      parentRoute: typeof SlideRouteRoute
+    }
+    '/slide/15': {
+      id: '/slide/15'
+      path: '/15'
+      fullPath: '/slide/15'
+      preLoaderRoute: typeof Slide15RouteImport
+      parentRoute: typeof SlideRouteRoute
+    }
+    '/slide/14': {
+      id: '/slide/14'
+      path: '/14'
+      fullPath: '/slide/14'
+      preLoaderRoute: typeof Slide14RouteImport
+      parentRoute: typeof SlideRouteRoute
+    }
+    '/slide/13': {
+      id: '/slide/13'
+      path: '/13'
+      fullPath: '/slide/13'
+      preLoaderRoute: typeof Slide13RouteImport
+      parentRoute: typeof SlideRouteRoute
+    }
+    '/slide/12': {
+      id: '/slide/12'
+      path: '/12'
+      fullPath: '/slide/12'
+      preLoaderRoute: typeof Slide12RouteImport
+      parentRoute: typeof SlideRouteRoute
+    }
+    '/slide/11': {
+      id: '/slide/11'
+      path: '/11'
+      fullPath: '/slide/11'
+      preLoaderRoute: typeof Slide11RouteImport
+      parentRoute: typeof SlideRouteRoute
+    }
+    '/slide/10': {
+      id: '/slide/10'
+      path: '/10'
+      fullPath: '/slide/10'
+      preLoaderRoute: typeof Slide10RouteImport
+      parentRoute: typeof SlideRouteRoute
+    }
+    '/slide/1': {
+      id: '/slide/1'
+      path: '/1'
+      fullPath: '/slide/1'
+      preLoaderRoute: typeof Slide1RouteImport
+      parentRoute: typeof SlideRouteRoute
     }
   }
 }
 
-interface SlideSlideIndexRouteRouteChildren {
-  SlideSlideIndexIndexRoute: typeof SlideSlideIndexIndexRoute
+interface SlideRouteRouteChildren {
+  Slide1Route: typeof Slide1Route
+  Slide10Route: typeof Slide10Route
+  Slide11Route: typeof Slide11Route
+  Slide12Route: typeof Slide12Route
+  Slide13Route: typeof Slide13Route
+  Slide14Route: typeof Slide14Route
+  Slide15Route: typeof Slide15Route
+  Slide16Route: typeof Slide16Route
+  Slide17Route: typeof Slide17Route
+  Slide18Route: typeof Slide18Route
+  Slide19Route: typeof Slide19Route
+  Slide2Route: typeof Slide2Route
+  Slide3Route: typeof Slide3Route
+  Slide4Route: typeof Slide4Route
+  Slide5Route: typeof Slide5Route
+  Slide6Route: typeof Slide6Route
+  Slide7Route: typeof Slide7Route
+  Slide8Route: typeof Slide8Route
+  Slide9Route: typeof Slide9Route
+  SlideIndexRoute: typeof SlideIndexRoute
 }
 
-const SlideSlideIndexRouteRouteChildren: SlideSlideIndexRouteRouteChildren = {
-  SlideSlideIndexIndexRoute: SlideSlideIndexIndexRoute,
+const SlideRouteRouteChildren: SlideRouteRouteChildren = {
+  Slide1Route: Slide1Route,
+  Slide10Route: Slide10Route,
+  Slide11Route: Slide11Route,
+  Slide12Route: Slide12Route,
+  Slide13Route: Slide13Route,
+  Slide14Route: Slide14Route,
+  Slide15Route: Slide15Route,
+  Slide16Route: Slide16Route,
+  Slide17Route: Slide17Route,
+  Slide18Route: Slide18Route,
+  Slide19Route: Slide19Route,
+  Slide2Route: Slide2Route,
+  Slide3Route: Slide3Route,
+  Slide4Route: Slide4Route,
+  Slide5Route: Slide5Route,
+  Slide6Route: Slide6Route,
+  Slide7Route: Slide7Route,
+  Slide8Route: Slide8Route,
+  Slide9Route: Slide9Route,
+  SlideIndexRoute: SlideIndexRoute,
 }
 
-const SlideSlideIndexRouteRouteWithChildren =
-  SlideSlideIndexRouteRoute._addFileChildren(SlideSlideIndexRouteRouteChildren)
+const SlideRouteRouteWithChildren = SlideRouteRoute._addFileChildren(
+  SlideRouteRouteChildren,
+)
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
-  SlideSlideIndexRouteRoute: SlideSlideIndexRouteRouteWithChildren,
+  SlideRouteRoute: SlideRouteRouteWithChildren,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

@@ -1,6 +1,6 @@
 import { createFileRoute, Link, useNavigate } from "@tanstack/solid-router";
 
-const Route = createFileRoute("/")({
+const Route = createFileRoute("/slide/")({
 	component: () => {
 		const navigate = useNavigate();
 
