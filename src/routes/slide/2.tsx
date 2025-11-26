@@ -1,21 +1,27 @@
 import { createFileRoute } from "@tanstack/solid-router";
-import emptyFileTree from "../../assets/images/empty-file-tree.webp";
 import { SlideLayout } from "../../components/slide-layout";
 
 const Route = createFileRoute("/slide/2")({
 	preload: true,
 	component: () => (
-		<SlideLayout index={2}>
-			<h2>Introduction</h2>
+		<SlideLayout index={3}>
+			<h2>Language</h2>
 
 			<ul>
-				<li>Picking up new tools and experimenting</li>
-				<li>Code = most raw tool, most flexible medium</li>
-				<li>Endless possibilities, steep learning curve</li>
-				<li>A clean file tree is the ultimate blank canvas</li>
+				<li>Coding world is in English</li>
+				<li>Mix of Danish and English</li>
+				<li>English coding terms</li>
 			</ul>
 
-			<img src={emptyFileTree} alt="A clean file tree" class="rounded-lg" />
+			<h2>Rules</h2>
+
+			<ul>
+				<li>Ask all the stupid questions</li>
+				<li>Have things explained, but do it yourself</li>
+				<li>
+					Filenames in kebab-case: <code>name-of-file.pdf</code>
+				</li>
+			</ul>
 		</SlideLayout>
 	),
 });

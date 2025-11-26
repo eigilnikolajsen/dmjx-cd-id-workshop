@@ -4,7 +4,7 @@ import { createRootRoute, HeadContent, Scripts } from "@tanstack/solid-router";
 import { HydrationScript } from "solid-js/web";
 import appleTouchIcon from "../assets/apple-touch-icon.png?no-inline";
 import faviconIco from "../assets/favicon.ico?no-inline";
-import faviconSvg from "../assets/svgs/favicon.svg?no-inline";
+import faviconSvg from "../assets/icon.svg?no-inline";
 import { Footer } from "../components/footer";
 import { Header } from "../components/header";
 import { PendingComponent } from "../components/pending-component";
