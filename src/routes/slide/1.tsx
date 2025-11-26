@@ -21,6 +21,10 @@ const Route = createFileRoute("/slide/1")({
 			</p>
 
 			<p>Interactive Design 20-23</p>
+
+			<a href="https://dmjx-cd-id-workshop.netlify.app" target="_blank">
+				dmjx-cd-id-workshop.netlify.app
+			</a>
 		</SlideLayout>
 	),
 });

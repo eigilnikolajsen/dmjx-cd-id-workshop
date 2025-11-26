@@ -9,6 +9,10 @@ const Route = createFileRoute("/slide/4")({
 			<h2>What are we building?</h2>
 
 			<img src={canvasStarter} alt="Canvas starter project" class="rounded-lg" />
+
+			<a href="https://canvas-starter.netlify.app" target="_blank">
+				canvas-starter.netlify.app
+			</a>
 		</SlideLayout>
 	),
 });

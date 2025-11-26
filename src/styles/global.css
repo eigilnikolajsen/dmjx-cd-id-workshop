@@ -80,6 +80,10 @@
 
 		@apply bg-black;
 	}
+
+	::selection {
+		@apply bg-black text-white;
+	}
 }
 
 @utility hide-scrollbar {
