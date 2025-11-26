@@ -6,14 +6,16 @@ const SlideLayout: ParentComponent = (props) => {
 	const params = useParams({ from: "/slide/$slideIndex" });
 
 	return (
-		<div class="p-4 absolute inset-0">
-			<div class="prose">{props.children}</div>
+		<>
+			<div class="absolute inset-0 items-center overflow-auto">
+				<div class="m-8 prose min-w-[65ch] max-w-full">{props.children}</div>
+			</div>
 			<footer class="absolute bottom-4 right-4 text-right">
-				<p>
+				<small>
 					Slide {params().slideIndex} of {TOTAL_SLIDES}
-				</p>
+				</small>
 			</footer>
-		</div>
+		</>
 	);
 };
 

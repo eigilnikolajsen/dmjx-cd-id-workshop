@@ -1,5 +1,3 @@
-import { Footer } from "@/components/footer";
-import { Header } from "@/components/header";
 import { SlideLayout } from "@/components/slide-layout";
 import { TOTAL_SLIDES } from "@/scripts/const";
 import { createFileRoute, Outlet, useNavigate } from "@tanstack/solid-router";
@@ -27,7 +25,7 @@ const Route = createFileRoute("/slide/$slideIndex")({
 						to: "/slide/$slideIndex",
 						params: { slideIndex: newSlideIndex.toString() },
 						viewTransition: { types: ["slide-down"] },
-					});
+					}).catch(console.error);
 				}
 			}
 
@@ -38,7 +36,7 @@ const Route = createFileRoute("/slide/$slideIndex")({
 						to: "/slide/$slideIndex",
 						params: { slideIndex: newSlideIndex.toString() },
 						viewTransition: { types: ["slide-up"] },
-					});
+					}).catch(console.error);
 				}
 			}
 		};
@@ -48,10 +46,8 @@ const Route = createFileRoute("/slide/$slideIndex")({
 				class="selection:bg-fg selection:fill-bg selection:text-bg text-small wrap-break-word antialiased"
 				spellcheck="false"
 			>
-				<Header />
-
-				<div class="fixed inset-0 flex items-center justify-center @container-[size]">
-					<main class="aspect-video max-w-[calc(100cqb*16/9)] w-full">
+				<div class="fixed inset-8 flex items-center justify-center @container-[size]">
+					<main class="aspect-square max-w-[calc(100cqb)] w-full">
 						<article class="w-full h-full relative @container bg-white [view-transition-name:main-content]">
 							<SlideLayout>
 								<Outlet />
@@ -59,8 +55,6 @@ const Route = createFileRoute("/slide/$slideIndex")({
 						</article>
 					</main>
 				</div>
-
-				<Footer />
 			</div>
 		);
 	},

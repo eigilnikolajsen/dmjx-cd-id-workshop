@@ -48,7 +48,7 @@ I've had to strike a balance between CD not being bored, but the learning curve 
 I want to you to use the same tools as the expert — me
 I want to show production ready code, like I would write it.
 
-How to win:
+## How to win
 
 1. Every time you encounter a term you haven't heard before, write it in the list
 2. The one to furthest (or finish first)
@@ -188,4 +188,4 @@ git push
 
 Repeat this step until satisfied.
 
-### 12. Deploy to Netlify
+### 11. Deploy to Netlify

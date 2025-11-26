@@ -85,29 +85,13 @@ const Modal: ParentComponent<Props> = (props) => {
 		<Show keyed when={delayedOpen.latest === "open"}>
 			<div
 				tabIndex={0}
-				onKeyDown={(event) => {
-					if (event.key === "Enter" || event.key === " ") {
-						event.preventDefault();
-
-						if (props.onSoftClose) {
-							props.onSoftClose();
-						} else {
-							props.onClose();
-						}
-					}
+				onKeyDown={() => {
+					//
 				}}
-				onKeyUp={(event) => {
-					if (event.key === "Enter" || event.key === " ") {
-						event.preventDefault();
-
-						if (props.onSoftClose) {
-							props.onSoftClose();
-						} else {
-							props.onClose();
-						}
-					}
+				onKeyUp={() => {
+					//
 				}}
-				class="bg-fg/20 fixed inset-0 z-50 flex items-center justify-center text-left opacity-0 backdrop-blur-xs"
+				class="bg-black/20 fixed inset-0 z-50 flex items-center justify-center text-left opacity-0 backdrop-blur-xs"
 				data-disabled={booleanAttribute(props.state() === "closed")}
 				onClick={(event) => {
 					if (event.currentTarget !== event.target) {
@@ -122,20 +106,8 @@ const Modal: ParentComponent<Props> = (props) => {
 				}}
 				ref={setModalBackgroundRef}
 			>
-				<div
-					class="bg-white border border-black relative overflow-hidden"
-					ref={setModalContainerRef}
-				>
+				<div class="relative overflow-hidden m-4" ref={setModalContainerRef}>
 					{props.children}
-					<button
-						type="button"
-						class="absolute top-2 right-2 size-4 cursor-pointer"
-						onClick={() => {
-							props.onClose();
-						}}
-					>
-						Close
-					</button>
 				</div>
 			</div>
 		</Show>

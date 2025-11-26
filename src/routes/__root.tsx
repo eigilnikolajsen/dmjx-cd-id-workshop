@@ -3,6 +3,8 @@
 import appleTouchIcon from "@/assets/apple-touch-icon.png?no-inline";
 import faviconIco from "@/assets/favicon.ico?no-inline";
 import faviconSvg from "@/assets/svgs/favicon.svg?no-inline";
+import { Footer } from "@/components/footer";
+import { Header } from "@/components/header";
 import { PendingComponent } from "@/components/pending-component";
 import { queryClient } from "@/scripts/query";
 import globalCss from "@/styles/global.css?url";
@@ -37,7 +39,13 @@ const Route = createRootRoute({
 			</head>
 			<body>
 				<HeadContent />
-				<QueryClientProvider client={queryClient}>{props.children}</QueryClientProvider>
+				<QueryClientProvider client={queryClient}>
+					<Header />
+
+					{props.children}
+
+					<Footer />
+				</QueryClientProvider>
 				<Scripts />
 			</body>
 		</html>

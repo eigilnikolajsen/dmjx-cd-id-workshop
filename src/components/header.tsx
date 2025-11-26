@@ -6,7 +6,7 @@ const Header: ParentComponent = () => {
 	const params = useParams({ from: "/slide/$slideIndex" });
 
 	return (
-		<header class="fixed top-0 left-0 right-0 z-1 flex items-center justify-between">
+		<header class="hidden fixed top-0 left-0 right-0 z-1 items-center justify-between">
 			<div class="flex items-center gap-2 *:p-2 *:bg-gray-100">
 				<Link
 					to="/slide/$slideIndex"
